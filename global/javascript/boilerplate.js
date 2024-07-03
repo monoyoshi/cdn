@@ -10,8 +10,8 @@ function header(active) {
     // my funny workaround is just an array
     let current = {
         index: ["", `${urlApex}`],
-        profile: ["", `${urlApex}/profile`],
-        projects: ["", `${urlApex}/projects`],
+        profile: ["", `${urlApex}/profile.html`],
+        projects: ["", `${urlApex}/projects.html`],
     };
 
     switch (active) {

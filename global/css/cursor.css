@@ -1,0 +1,75 @@
+.dtrailpiece,
+.dragdust,
+#drag,
+#tap {
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+}
+
+#tap {
+    width: 150px;
+    height: 150px;
+    background-image: none;
+    background-size: 100%;
+    animation-duration: 200ms;
+}
+
+#tap.ped {
+    animation-name: tap;
+}
+
+.dtrailpiece,
+.dragdust {
+    border-radius: 50%;
+    background-color: var(--white);
+    animation-duration: 500ms;
+}
+
+.dtrailpiece {
+    animation-name: shrink;
+}
+
+.dragdust {
+    animation-name: fadeshrink;
+}
+
+@keyframes tap {
+    0% {
+        background-image: url('../images/cursor/0.svg');
+    }
+    20% {
+        background-image: url('../images/cursor/1.svg');
+    }
+    40% {
+        background-image: url('../images/cursor/2.svg');
+    }
+    60% {
+        background-image: url('../images/cursor/3.svg');
+    }
+    80% {
+        background-image: url('../images/cursor/4.svg');
+    }
+    100% {
+        background-image: url('../images/cursor/5.svg');
+    }
+}
+
+@keyframes shrink {
+    0% {
+        width: 15px;
+        height: 15px;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+@keyframes fadeshrink {
+    100% {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+    }
+}

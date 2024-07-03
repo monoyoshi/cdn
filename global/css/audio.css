@@ -1,0 +1,14 @@
+/* audioblock */
+.audioblock {
+    display: inline-block;
+    background-color: var(--dgray);
+    border-width: 0px;
+    color: var(--white);
+    min-height: 20px;
+    min-width: 20px;
+    border-radius: 5px;
+    margin: 0.5em;
+}
+.audioblock:hover:active {
+    background-color: var(--a_lightblue);
+}

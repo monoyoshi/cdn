@@ -1,0 +1,39 @@
+#dust-canvas {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+}
+
+.particle {
+    background-color: var(--white);
+    border-radius: 50%;
+    position: fixed;
+    animation-name: dustFadeIn;
+    animation-duration: 1000ms;
+}
+
+.dfo {
+    animation-name: dustFadeOut;
+}
+
+@keyframes dustFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dustFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

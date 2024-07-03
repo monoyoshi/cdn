@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="150"
+   height="150"
+   viewBox="0 0 150 150"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="workspace_cursor.svg"
+   inkscape:export-filename="tap5.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="-10.076272"
+     inkscape:cy="106.24279"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <path
+       id="path2"
+       style="display:inline;fill:#f5faff;fill-opacity:1;fill-rule:evenodd;stroke:#ebd24b;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 75,25 -2.5,25.882812 1.185547,6.695312 A 17.5,17.5 0 0 0 59.84375,66.25 17.5,17.5 0 0 0 57.54297,74.839843 L 43.5,72.499999 16,74.999999 43.500001,77.5 57.535157,75.160156 a 17.5,17.5 0 0 0 8.714844,14.996094 17.5,17.5 0 0 0 7.433593,2.271484 L 72.5,99.117187 75,125 77.5,99.117187 76.314453,92.421875 a 17.5,17.5 0 0 0 13.841798,-8.671876 17.5,17.5 0 0 0 2.33789,-8.583983 L 106.5,77.499999 134,75 106.5,72.5 92.496093,74.833985 A 17.5,17.5 0 0 0 83.75,59.843749 17.5,17.5 0 0 0 76.316406,57.572265 L 77.5,50.882813 Z M 73.859375,58.5625 75,65 76.140626,58.564452 A 16.5,16.5 0 0 1 83.250001,60.710937 16.5,16.5 0 0 1 89.289063,83.25 16.5,16.5 0 0 1 76.140625,91.437499 L 75,84.999999 73.859375,91.435547 A 16.5,16.5 0 0 1 66.75,89.289062 16.5,16.5 0 0 1 60.710938,66.749999 16.5,16.5 0 0 1 73.859375,58.5625 Z"
+       inkscape:label="all"
+       transform="rotate(-30,75,75)" />
+  </g>
+</svg>

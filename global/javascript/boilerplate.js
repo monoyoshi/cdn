@@ -2,16 +2,13 @@
 // I wanna have a header and a footer I can easily update through one file
 // especially since it's static across all pages
 
-const urlApex = "https://bladewyrm.dev";
-const urlCDN = `https://cdn.bladewyrm.dev`;
-
 function header(active) {
     // active = active "section" of the website
     // my funny workaround is just an array
     let current = {
-        index: ["", `${urlApex}`],
-        profile: ["", `${urlApex}/profile.html`],
-        projects: ["", `${urlApex}/projects.html`],
+        index: ["", `https://bladewyrm.dev`],
+        profile: ["", `https://bladewyrm.dev/profile.html`],
+        projects: ["", `https://bladewyrm.dev/projects.html`],
     };
 
     switch (active) {
@@ -45,7 +42,7 @@ function header(active) {
                 class: "header-nav-btn",
                 id: current.index[0],
                 css: {
-                    "background-image": `url('${urlCDN}/global/images/headernav/index.svg')`
+                    "background-image": `url('https://cdn.bladewyrm.dev/global/images/headernav/index.svg')`
                 },
                 href: current.index[1]
             }))
@@ -53,7 +50,7 @@ function header(active) {
                 class: "header-nav-btn",
                 id: current.profile[0],
                 css: {
-                    "background-image": `url('${urlCDN}/global/images/headernav/profile.svg')`
+                    "background-image": `url('https://cdn.bladewyrm.dev/global/images/headernav/profile.svg')`
                 },
                 href: current.profile[1]
             }))
@@ -61,7 +58,7 @@ function header(active) {
                 class: "header-nav-btn",
                 id: current.projects[0],
                 css: {
-                    "background-image": `url('${urlCDN}/global/images/headernav/projects.svg')`
+                    "background-image": `url('https://cdn.bladewyrm.dev/global/images/headernav/projects.svg')`
                 },
                 href: current.projects[1]
             }))
@@ -86,7 +83,7 @@ function footer() {
             }
         })
             .append($("<img>", {
-                src: `${urlCDN}/global/images/kyurem/sprite-animated_kyurem.png`,
+                src: `https://cdn.bladewyrm.dev/global/images/kyurem/sprite-animated_kyurem.png`,
                 height: "50px",
                 width: "50px",
                 css: {                    

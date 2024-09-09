@@ -1,4 +1,4 @@
-#dust-canvas {
+#asset_dust {
     overflow: hidden;
     position: fixed;
     width: 100vw;
@@ -10,15 +10,15 @@
     background-color: var(--white);
     border-radius: 50%;
     position: fixed;
-    animation-name: dustFadeIn;
+    animation-name: dust_fadein;
     animation-duration: 1000ms;
 }
 
 .dfo {
-    animation-name: dustFadeOut;
+    animation-name: dust_fadeout;
 }
 
-@keyframes dustFadeIn {
+@keyframes dust_fadein {
     0% {
         opacity: 0;
     }
@@ -28,7 +28,7 @@
     }
 }
 
-@keyframes dustFadeOut {
+@keyframes dust_fadeout {
     0% {
         opacity: 1;
     }

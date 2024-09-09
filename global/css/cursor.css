@@ -1,22 +1,33 @@
+:root {
+    --sizeClick: 150px;
+    --sizeClickLink: 200px;
+}
+
 .dtrailpiece,
 .dragdust,
 #drag,
-#tap {
+#click {
     position: fixed;
     z-index: 99;
     pointer-events: none;
 }
 
-#tap {
-    width: 150px;
-    height: 150px;
+#click {
+    width: var(--sizeClick);
+    height: var(--sizeClick);
     background-image: none;
     background-size: 100%;
     animation-duration: 200ms;
 }
 
-#tap.ped {
-    animation-name: tap;
+#click.ed {
+    animation-name: cursor_click;
+}
+
+#click.edlink {
+    width: var(--sizeClickLink);
+    height: var(--sizeClickLink);
+    animation-name: cursor_clicklink;
 }
 
 .dtrailpiece,
@@ -27,14 +38,15 @@
 }
 
 .dtrailpiece {
-    animation-name: shrink;
+    animation-name: cursor_trailpiece;
 }
 
 .dragdust {
-    animation-name: fadeshrink;
+    animation-name: cursor_sprinkle;
 }
 
-@keyframes tap {
+/* regular ahh click */
+@keyframes cursor_click {
     0% {
         background-image: url('../images/cursor/0.svg');
     }
@@ -55,7 +67,33 @@
     }
 }
 
-@keyframes shrink {
+/* todo: link click! :) */
+/* basically a flashier animation if an interactable object is being pressed */
+@keyframes cursor_clicklink {
+    0% {
+        background-image: url('../images/cursor/0.svg');
+    }
+    20% {
+        background-image: url('../images/cursor/1.svg');
+    }
+    40% {
+        background-image: url('../images/cursor/2.svg');
+    }
+    60% {
+        background-image: url('../images/cursor/3.svg');
+    }
+    80% {
+        background-image: url('../images/cursor/4.svg');
+    }
+    100% {
+        background-image: url('../images/cursor/5.svg');
+    }
+}
+
+/* cursor trail */
+/* basic for now */
+/* todo: make it so it's not just a bunch of <div> element particles */
+@keyframes cursor_trailpiece {
     0% {
         width: 15px;
         height: 15px;
@@ -66,7 +104,8 @@
     }
 }
 
-@keyframes fadeshrink {
+/* cursor dust */
+@keyframes cursor_sprinkle {
     100% {
         opacity: 0;
         width: 0px;

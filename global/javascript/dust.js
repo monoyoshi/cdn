@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // variables
     // magic
-    let $dustCanvas = $("#dust-canvas");
+    let $dustCanvas = $("#asset_dust");
 
     // functions
     // generate particles of amount a

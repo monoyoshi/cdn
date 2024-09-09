@@ -94,6 +94,12 @@ function footer() {
     )
 };
 
+// "get url parameters" but I think it's funny to keep everything as one letter
+// *gurlp* t-they're right behind me, isn't it
+function gURLP(p) {
+    return new URLSearchParams(document.location.search).get(p);
+};
+
 $(document).ready(function() {
     $(this).scrollTop(0);
 

@@ -120,7 +120,7 @@ a.button {
     font-size: inherit;
     color: inherit;
     text-align: center;
-    background-color: var(--dgray);
+    background-color: var(--darkgray);
     border: 1px solid var(--a_lightblue);
     border-radius: 5px;
     padding: 5px 10px;
@@ -159,7 +159,7 @@ img:not(.gallery img) {
 
 table {
     max-width: 100%;
-    background-color: var(--dgray);
+    background-color: var(--darkgray);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 0 var(--shadow);
@@ -262,7 +262,7 @@ table.transparent td {
 }
 
 .quote {
-    background-color: var(--dgray);
+    background-color: var(--darkgray);
     border-left: 5px solid var(--a_lightblue);
     font-style: italic;
 }
@@ -285,7 +285,7 @@ table.transparent td {
     top: 0;
     left: 50%;
     margin-top: -20px;
-    background-color: var(--dgray);
+    background-color: var(--darkgray);
     color: var(--white);
     border-radius: 10px;
     text-align: center;
@@ -311,7 +311,7 @@ table.transparent td {
     margin-left: -10px;
     border-width: 10px;
     border-style: solid;
-    border-color: var(--dgray) transparent transparent transparent;
+    border-color: var(--darkgray) transparent transparent transparent;
 }
 
 /* - - - - - - - - - */

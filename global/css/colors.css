@@ -5,22 +5,23 @@
     --white: rgb(245, 250, 255);
     --glow: rgba(245, 250, 255, 0.3);
 
-    --darkgray: rgb(50, 65, 85);
-    --gray: rgb(110, 125, 145);
-    --lightgray: rgb(200, 215, 235);
-
     /* a = accent */
     --a_blue: rgb(55, 115, 185);
         --a_darkblue: rgb(25, 65, 115);
         --a_strongblue: rgb(80, 160, 255);
         --a_lightblue: rgb(115, 190, 235);
-    --a_bluegray: rgb(105, 125, 145);
+    --a_bluegray: rgb(100, 110, 145);
+    --a_gray: rgb(100, 100, 105);
+        --a_darkgray: rgb(40, 40, 45);
+        --a_lightgray: rgb(190, 190, 195);
     --a_yellow: rgb(235, 210, 75);
     --a_green: rgb(5, 155, 135);
     --a_magenta: rgb(240, 65, 180);
 
-    --bg1: rgb(20, 40, 65);
-    --bg2: rgb(70, 105, 140);
+    --bg0_p: rgb(30, 45, 65);
+    --bg0_s: rgb(40, 40, 45);
+    --bg1_p: rgb(20, 40, 65);
+    --bg1_s: rgb(70, 105, 140);
 
     --buttonhover: rgb(80, 125, 160);
 }

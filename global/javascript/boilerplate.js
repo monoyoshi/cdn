@@ -75,11 +75,13 @@ function footer() {
         .append($("<div>", {
             class: "frame",
             css: {
+                "height": "50px",
+                "width": "50px",
                 "margin": 0,
                 "margin-right": "15px",
                 "padding": 0,
                 "position": "relative",
-                "bottom": "7px"
+                "bottom": "5px"
             }
         })
             .append($("<img>", {

@@ -1,0 +1,24 @@
+/* - - - - - - - - - */
+/* mobile adjust */
+/* - - - - - - - - - */
+
+@media only screen and (max-aspect-ratio: 1) {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+        max-width: none;
+        margin: 20px;
+    }
+
+    [class*="column-"] {
+        width: 100%;
+    }
+
+    div.auxillary {
+        display: none;
+    }
+}
+
+/* - - - - - - - - - */

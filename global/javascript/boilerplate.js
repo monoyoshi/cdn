@@ -81,7 +81,7 @@ function footer() {
                 "margin-right": "15px",
                 "padding": 0,
                 "position": "relative",
-                "bottom": "5px"
+                "bottom": "9px"
             }
         })
             .append($("<img>", {
@@ -106,12 +106,12 @@ $(document).ready(function() {
     $(this).scrollTop(0);
 
     /*
-    // viewport background gradient rotation
-    let $viewport = $("#viewport");
-    let deg = parseInt($viewport.css("--vpdeg")) + 1;
+    // body background gradient rotation
+    let $body = $("body");
+    let deg = parseInt($body.css("--vpdeg")) + 1;
     setInterval(() => {
         if (deg == 360) deg = 0;
-        $viewport.css("background-image", `linear-gradient(${deg}deg, var(--bg1), var(--bg2))`);
+        $body.css("background-image", `linear-gradient(${deg}deg, var(--bg1), var(--bg2))`);
         ++deg;
     }, 50);
     */

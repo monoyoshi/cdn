@@ -19,21 +19,21 @@ html {
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
     margin: 0;
+    padding: 0;
+    --vpdeg: 190deg;
+    background-image: linear-gradient(var(--vpdeg), var(--bg0_p), var(--bg0_s));
 }
 
 main {
-    background-color: var(--white);
-    color: var(--black);
-    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    max-width: 65vw;
-    height: 80vh;
+    height: 100%;
+    margin: 0;
 }
 
 footer {
@@ -49,7 +49,7 @@ footer {
     opacity: 0.3;
     transition-duration: 500ms;
     user-select: none;
-    z-index: 90;
+    z-index: 99;
 }
 
 footer:hover {
@@ -182,6 +182,22 @@ table.transparent td {
 /* - - - - - - - - - */
 
 /* grid-view */
+.row {
+    margin: 10px;
+}
+
+.row > * {
+    margin: 0 10px;
+}
+
+.row > *:first-of-type {
+    margin-left: 0;
+}
+
+.row > *:last-of-type {
+    margin-right: 0;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -190,7 +206,6 @@ table.transparent td {
 
 [class*="column-"] {
     float: left;
-    padding: 15px;
 }
 
 .column-5 {
@@ -275,10 +290,55 @@ table.transparent td {
 
 /* - - - - - - - - - */
 
+/* card */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    max-width: 65vw;
+    height: 80%;
+    max-height: 80vh;
+    margin: 10px;
+}
+
+.card > .header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--a_darkblue);
+    min-height: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px;
+    font-size: 1.17em;
+    user-select: none;
+}
+
+.card > .content {
+    margin: 10px;
+    margin-bottom: 0px;
+    color: var(--black);
+    overflow: scroll;
+}
+
+.card > .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 0px -2px var(--shadow);
+}
+
+/* - - - - - - - - - */
+
 /* flexbox containers and frames (single image) / galleries (multiple images) */
 .flexbox,
 .frame,
-.gallery {
+.frames {
     display: flex;
     align-items: flex-start;
 }
@@ -290,7 +350,7 @@ table.transparent td {
 .flexbox.center,
 .flexbox.column.center,
 .frame,
-.gallery {
+.frames {
     align-items: center;
     justify-content: center;
 }
@@ -299,17 +359,18 @@ table.transparent td {
     justify-content: flex-start;
 }
 
-.frame, .gallery {
+.frame,
+.frames {
     margin: 15px;
     padding: 15px;
 }
 
-.gallery {
+.frames {
     margin: 0;
     padding-right: 0;
 }
 
-.gallery>* {
+.frames>* {
     margin-right: 15px;
 }
 
@@ -423,8 +484,6 @@ table.transparent td {
     width: 100vw;
     height: 100vh;
     z-index: -99;
-    --vpdeg: 190deg;
-    background-image: linear-gradient(var(--vpdeg), var(--bg0_p), var(--bg0_s));
 }
 
 /* - - - - - - - - - */

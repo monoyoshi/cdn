@@ -1,9 +1,11 @@
 :root {
     --black: rgb(0, 5, 10);
     --shadow: rgba(0, 5, 10, 0.3);
+    --strongshadow: rgba(0, 5, 10, 0.6);
 
     --white: rgb(245, 250, 255);
     --glow: rgba(245, 250, 255, 0.3);
+    --strongglow: rgba(245, 250, 255, 0.6);
 
     /* a = accent */
     --a_blue: rgb(55, 115, 185);

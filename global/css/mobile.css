@@ -2,23 +2,37 @@
 /* mobile adjust */
 /* - - - - - - - - - */
 
+@media only screen and not (max-aspect-ratio: 1) {
+    .mobileshow {
+        display: none;
+    }
+
+    /* - - - - - - - - - */
+}
+
+
 @media only screen and (max-aspect-ratio: 1) {
     html {
         font-size: 12px;
     }
 
-    main {
+    .card {
         max-width: none;
-        margin: 20px;
+    }
+
+    .mobilehide {
+        display: none;
+    }
+
+    .row > * {
+        margin: 0;
     }
 
     [class*="column-"] {
         width: 100%;
     }
 
-    div.auxillary {
-        display: none;
-    }
+    /* - - - - - - - - - */
 }
 
 /* - - - - - - - - - */

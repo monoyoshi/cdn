@@ -10,7 +10,7 @@
 
 ::selection {
     color: var(--white);
-    background-color: var(--a_lightblue);
+    background-color: var(--a_strongblue);
 }
 
 html {
@@ -110,7 +110,7 @@ a.button {
     background-color: var(--a_darkgray);
     border: 1px solid var(--a_lightblue);
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px;
     margin: 5px;
 }
 
@@ -120,14 +120,15 @@ a.button:hover {
 }
 
 button:hover:active,
-a.button:hover {
-    transition: 10ms;
-    background-color: var(--a_lightblue);
-}
-
+a.button:hover,
 button.active,
 a.button.active {
     background-color: var(--a_lightblue);
+}
+
+button:hover:active,
+a.button:hover {
+    transition: 10ms;
 }
 
 /* - - - - - - - - - */
@@ -300,6 +301,7 @@ table.transparent td {
     height: 80%;
     max-height: 80vh;
     margin: 10px;
+    box-shadow: 0px 5px var(--shadow);
 }
 
 .card > .header {
@@ -325,12 +327,27 @@ table.transparent td {
 .card > .actions {
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 75px;
+    justify-content: space-evenly;
     margin: 0;
     margin-bottom: 10px;
     padding-top: 10px;
+    min-height: 6rem;
     box-shadow: 0px -2px var(--shadow);
+    text-align: center;
+}
+
+.card > .actions > button,
+.card > .actions > a.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 45%;
+    height: 4rem;
+    margin: auto 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* - - - - - - - - - */

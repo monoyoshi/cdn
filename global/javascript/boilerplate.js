@@ -33,10 +33,7 @@ function header(active) {
         class: "header-nav"
     })
         .append($("<div>", {
-            class: "flexbox center",
-            css: {
-                "margin-bottom": "5px"
-            }
+            class: "flexbox center"
         })
             .append($("<a>", {
                 class: "header-nav-btn",

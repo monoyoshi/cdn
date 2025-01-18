@@ -6,6 +6,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 ::selection {
@@ -15,7 +16,6 @@
 
 html {
     overflow: auto;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -104,8 +104,8 @@ a.button.active {
 
 button,
 a.button {
-    font-size: inherit;
-    color: inherit;
+    font-size: 16px;
+    color: var(--white);
     text-align: center;
     background-color: var(--a_darkgray);
     border: 1px solid var(--a_lightblue);
@@ -309,15 +309,16 @@ table.transparent td {
     align-items: center;
     justify-content: flex-start;
     background-color: var(--a_darkblue);
-    min-height: 50px;
+    height: 50px;
     overflow: hidden;
     white-space: nowrap;
     padding: 15px;
-    font-size: 1.17em;
+    font-size: 16px;
     user-select: none;
 }
 
 .card > .content {
+    height: 100%;
     margin: 10px;
     margin-bottom: 0px;
     color: var(--black);
@@ -326,28 +327,27 @@ table.transparent td {
 
 .card > .actions {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 0;
-    margin-bottom: 10px;
-    padding-top: 10px;
-    min-height: 6rem;
+    padding: 0 10px;
+    height: 100px;
     box-shadow: 0px -2px var(--shadow);
-    text-align: center;
 }
 
 .card > .actions > button,
 .card > .actions > a.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 45%;
-    height: 4rem;
-    margin: auto 5px;
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+    font-size: 12px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.card > .actions > button:last-child,
+.card > .actions > a.button:last-child {
+    margin-right: 0;
 }
 
 /* - - - - - - - - - */

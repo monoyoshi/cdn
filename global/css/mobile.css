@@ -6,16 +6,6 @@
     .mobileshow {
         display: none;
     }
-
-    .card > .actions > button:first-child,
-    .card > .actions > a.button:first-child {
-        margin-right: 0;
-    }
-
-    .card > .actions > button:last-child,
-    .card > .actions > a.button:last-child {
-        margin-left: 0;
-    }
 }
 
 
@@ -28,22 +18,9 @@
         max-width: none;
     }
 
-    .card > .actions {
-        flex-direction: column;
-        padding: 0;
-        padding-top: 10px;
-        height: 5rem;
-        min-height: none;
-        max-height: none;
-    }
-
     .card > .actions > button,
     .card > .actions > a.button {
-        justify-content: center;
-        align-items: center;
-        max-width: 90%;
-        margin: 5px auto;
-        font-size: 12px;
+        width: 150px;
     }
 
     .mobilehide {

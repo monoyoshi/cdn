@@ -14,8 +14,21 @@
         font-size: 12px;
     }
 
+    footer {
+        top: 0;
+    }
+
+    .hnbutton {
+        width: 50px;
+        height: 50px;
+        margin: 0 10px 10px 0;
+    }
+
     .card {
+        width: calc(100vw - 20px);
         max-width: none;
+        height: calc(100vh - 140px);
+        margin: 0;
     }
 
     .card > .actions > button,

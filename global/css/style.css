@@ -27,6 +27,14 @@ body {
     background-image: linear-gradient(var(--vpdeg), var(--bg0_p), var(--bg0_s));
 }
 
+header {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 90;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -39,17 +47,18 @@ main {
 footer {
     display: flex;
     justify-content: flex-end;
+    align-content: space-evenly;
     position: fixed;
     right: 0;
-    bottom: 0;
-    color: var(--lgray);
-    font-size: 12px;
+    bottom: 10px;
+    width: 100%;
+    height: 32px;
     overflow: hidden;
     white-space: nowrap;
     opacity: 0.3;
     transition-duration: 500ms;
     user-select: none;
-    z-index: 99;
+    z-index: 81;
 }
 
 footer:hover {
@@ -137,9 +146,8 @@ img {
     pointer-events: none;
 }
 
-img:not(.gallery img) {
+img:not(.frames img) {
     display: inline-block;
-    margin: 15px;
     max-width: 100%;
 }
 
@@ -181,6 +189,25 @@ table.transparent td {
 /* - - - - - - - - - */
 /* classes */
 /* - - - - - - - - - */
+
+/* - - - - - - - - - */
+
+.hnbutton {
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1;
+    background-size: 100%;
+    margin: 0 20px 20px 0;
+    pointer-events: auto;
+}
+
+.hnbutton:last-child {
+    margin-right: 0;
+}
+
+.hnbutton#active {
+    cursor: pointer;
+}
 
 /* grid-view */
 .row {
@@ -296,11 +323,11 @@ table.transparent td {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
-    width: 100%;
-    max-width: 65vw;
-    height: 80%;
-    max-height: 80vh;
-    margin: 10px;
+    width: 65vw;
+    max-width: 1000px;
+    height: calc(100vh - 280px);
+    min-height: 270px;
+    margin: 0 90px;
     box-shadow: 0px 5px var(--shadow);
 }
 
@@ -353,9 +380,7 @@ table.transparent td {
 /* - - - - - - - - - */
 
 /* flexbox containers and frames (single image) / galleries (multiple images) */
-.flexbox,
-.frame,
-.frames {
+.flexbox {
     display: flex;
     align-items: flex-start;
 }
@@ -365,30 +390,13 @@ table.transparent td {
 }
 
 .flexbox.center,
-.flexbox.column.center,
-.frame,
-.frames {
+.flexbox.column.center {
     align-items: center;
     justify-content: center;
 }
 
 .flexbox.center.horizontal {
     justify-content: flex-start;
-}
-
-.frame,
-.frames {
-    margin: 15px;
-    padding: 15px;
-}
-
-.frames {
-    margin: 0;
-    padding-right: 0;
-}
-
-.frames>* {
-    margin-right: 15px;
 }
 
 /* - - - - - - - - - */

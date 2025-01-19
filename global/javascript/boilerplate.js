@@ -30,67 +30,80 @@ function header(active) {
     };
 
     $("header").append($("<nav>", {
-        class: "header-nav"
+        css: {
+            "width": "100%",
+            "pointer-events": "none"
+        }
     })
         .append($("<div>", {
-            class: "flexbox center"
+            css: {
+                "display": "flex",
+                "align-items": "center",
+                "justify-content": "center"
+            }
         })
             .append($("<a>", {
-                class: "header-nav-btn",
+                class: "hnbutton",
                 id: current.index[0],
                 css: {
-                    "background-image": `url('https://cdn.bladewyrm.dev/global/images/headernav/index.svg')`
+                    "background-color": "lightskyblue"
                 },
                 href: current.index[1]
             }))
             .append($("<a>", {
-                class: "header-nav-btn",
+                class: "hnbutton",
                 id: current.profile[0],
                 css: {
-                    "background-image": `url('https://cdn.bladewyrm.dev/global/images/headernav/profile.svg')`
+                    "background-color": "lightpink"
                 },
                 href: current.profile[1]
             }))
             .append($("<a>", {
-                class: "header-nav-btn",
+                class: "hnbutton",
                 id: current.projects[0],
                 css: {
-                    "background-image": `url('https://cdn.bladewyrm.dev/global/images/headernav/projects.svg')`
+                    "background-color": "var(--white)"
                 },
                 href: current.projects[1]
+            }))
+            // these two are here so I can just have a trans flag hehe
+            .append($("<a>", {
+                class: "hnbutton",
+                css: {
+                    "background-color": "lightpink"
+                }
+            }))
+            .append($("<a>", {
+                class: "hnbutton",
+                css: {
+                    "background-color": "lightskyblue"
+                }
             }))
         )
     );
 };
 
 function footer() {
-    $("footer").append($("<div>", {
-            class: "textbox"
-        })
-            .html("made with pure hyperfixation by <b>kyu(ren)</b>")
-        )
+    $("footer")
         .append($("<div>", {
-            class: "frame",
             css: {
-                "height": "50px",
-                "width": "50px",
-                "margin": 0,
-                "margin-right": "15px",
-                "padding": 0,
                 "position": "relative",
-                "bottom": "9px"
+                "top": "12px",
+                "font-size": "10px",
+                "color": "var(--lgray)"
             }
         })
-            .append($("<img>", {
-                src: `https://cdn.bladewyrm.dev/global/images/kyurem/sprite-animated_kyurem.png`,
-                height: "50px",
-                width: "50px",
-                css: {                    
-                    margin: 0,
-                    padding: 0
-                }
-            }))
-    )
+            .html("made with love and pure hyperfixation by <b>kyu(ren)</b>")
+        )
+        .append($("<img>", {
+            src: `https://cdn.bladewyrm.dev/global/images/kyurem/sprite-animated_kyurem.png`,
+            height: 32,
+            width: 32,
+            css: {
+                "margin": "0 10px"
+            }
+        })
+    );
 };
 
 // "get url parameters" but I think it's funny to keep everything as one letter

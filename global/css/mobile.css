@@ -1,7 +1,3 @@
-/* - - - - - - - - - */
-/* mobile adjust */
-/* - - - - - - - - - */
-
 @media only screen and not (max-aspect-ratio: 1) {
     .mobileshow {
         display: none;

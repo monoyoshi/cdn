@@ -156,12 +156,9 @@ img:not(.frames img) {
 /* - - - - - - - - - */
 
 table {
-    max-width: 100%;
     background-color: var(--a_darkgray);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 0 var(--shadow);
     text-align: left;
+    margin: 0 15px;
 }
 
 th,
@@ -171,19 +168,23 @@ td {
 }
 
 th {
+    background-color: var(--a_lightblue);
     padding-right: 15px;
 }
 
-table.transparent {
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
+td {
+    background-color: var(--a_lightgray);
 }
 
+td.tablebreak,
+table.transparent,
 table.transparent th,
 table.transparent td {
-    padding: 0 15px 0 0;
+    background-color: transparent;
+}
+
+table.transparent {
+    color: var(--black);
 }
 
 /* - - - - - - - - - */

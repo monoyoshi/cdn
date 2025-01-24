@@ -12,6 +12,8 @@
 
     footer {
         top: 0;
+        padding: 0 0 0 15px;
+        border-radius: 0 0 0 15px;
     }
 
     .hnbutton {
@@ -25,6 +27,14 @@
         max-width: none;
         height: calc(100vh - 140px);
         margin: 0;
+    }
+
+    .card > .content {
+        margin: 10px;
+    }
+
+    .card > .content:not(.content.noactions) {
+        margin-bottom: 0px;
     }
 
     .card > .actions > button,

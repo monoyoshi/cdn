@@ -36,13 +36,16 @@ header {
 }
 
 main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+main.flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 0;
 }
 
 footer {
@@ -367,6 +370,14 @@ table.transparent {
 .card > .actions > button:last-child,
 .card > .actions > a.button:last-child {
     margin-right: 0;
+}
+
+/* - - - - - - - - - */
+
+/* fullscreen */
+
+.fullscreen {
+    width: 100vw;
 }
 
 /* - - - - - - - - - */

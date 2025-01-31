@@ -91,7 +91,8 @@ function footer() {
                 "top": "13px",
                 "font-family": `"RocknRoll One", sans-serif`,
                 "font-size": "10px",
-                "color": "var(--lgray)"
+                "color": "var(--lgray)",
+                "user-select": "none"
             }
         })
             .html("made with love and pure hyperfixation by <b>kyu(ren)</b>")

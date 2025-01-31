@@ -88,7 +88,7 @@ function footer() {
         .append($("<div>", {
             css: {
                 "position": "relative",
-                "top": "12px",
+                "top": "13px",
                 "font-family": `"RocknRoll One", sans-serif`,
                 "font-size": "10px",
                 "color": "var(--lgray)"

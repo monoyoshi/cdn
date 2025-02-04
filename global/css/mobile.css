@@ -22,6 +22,18 @@
         margin: 0 10px 10px 0;
     }
 
+    .mobilehide {
+        display: none;
+    }
+
+    .row > * {
+        margin: 0;
+    }
+
+    [class*="column-"] {
+        width: 100%;
+    }
+
     .card {
         width: calc(100vw - 20px);
         max-width: none;
@@ -42,16 +54,8 @@
         width: 150px;
     }
 
-    .mobilehide {
-        display: none;
-    }
-
-    .row > * {
-        margin: 0;
-    }
-
-    [class*="column-"] {
-        width: 100%;
+    .widescreen {
+        padding: 0 5%;
     }
 
     /* - - - - - - - - - */

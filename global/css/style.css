@@ -103,11 +103,23 @@ a {
     
 }
 
-a:hover:active:not(a.button) {
+a:hover:active {
     color: var(--a_yellow);
 }
 
 /* - - - - - - - - - */
+
+button,
+button:hover,
+button:hover:active,
+button.active,
+a.button,
+a.button:hover,
+a.button:hover:active,
+a.button.active {
+    color: var(--white);
+
+}
 
 button,
 button.active,
@@ -134,10 +146,11 @@ a.button:hover {
 }
 
 button:hover:active,
-a.button:hover,
 button.active,
+a.button:hover:active,
 a.button.active {
     background-color: var(--a_lightblue);
+
 }
 
 button:hover:active,
@@ -390,12 +403,12 @@ table.transparent {
 
 .widescreen.left {
     justify-content: flex-start;
-    padding-left: 100px;
+    padding-left: 5%;
 }
 
 .widescreen.right {
     justify-content: flex-end;
-    padding-right: 100px;
+    padding-right: 5%;
 }
 
 .widescreen > * {

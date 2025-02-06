@@ -118,7 +118,17 @@ a.button:hover,
 a.button:hover:active,
 a.button.active {
     color: var(--white);
+}
 
+button.light,
+button.light:hover,
+button.light:hover:active,
+button.light.active,
+a.button.light,
+a.button.light:hover,
+a.button.light:hover:active,
+a.button.light.active {
+    color: var(--black);
 }
 
 button,
@@ -130,14 +140,26 @@ a.button.active {
 
 button,
 a.button {
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
     color: var(--white);
-    text-align: center;
     background-color: var(--a_darkgray);
     border: 1px solid var(--a_lightblue);
     border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
+}
+
+
+button.light,
+a.button.light {
+    background-color: var(--white);
+}
+
+button img,
+a.button img {
+    width: 75%;
 }
 
 button:hover,
@@ -145,12 +167,16 @@ a.button:hover {
     background-color: var(--buttonhover);
 }
 
+button.light:hover,
+a.button.light:hover {
+    background-color: var(--lightbuttonhover);
+}
+
 button:hover:active,
 button.active,
 a.button:hover:active,
 a.button.active {
     background-color: var(--a_lightblue);
-
 }
 
 button:hover:active,

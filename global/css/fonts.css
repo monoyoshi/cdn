@@ -6,7 +6,7 @@ html {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: var(--white);
+    color: var(--black);
     line-height: 1.6;
 }
 
@@ -20,4 +20,23 @@ code {
     border: 1px solid var(--black);
     border-radius: 5px;
     padding: 0 5px;
+}
+
+::selection {
+    color: var(--white);
+    background-color: var(--a_strongblue);
+}
+
+a {
+    color: var(--a_strongblue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover:active {
+    color: var(--a_yellow);
+}
+
+.darkmode {
+    color: var(--white);
 }

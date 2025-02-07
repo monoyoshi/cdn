@@ -9,15 +9,6 @@
     scroll-behavior: smooth;
 }
 
-::selection {
-    color: var(--white);
-    background-color: var(--a_strongblue);
-}
-
-html {
-    overflow: auto;
-}
-
 body {
     width: 100vw;
     height: 100vh;
@@ -56,7 +47,8 @@ footer {
     right: 0;
     bottom: 0;
     height: 42px;
-    background-color: black;
+    background-color: var(--black);
+    color: var(--white);
     padding: 0 0 10px 16px;
     border-radius: 15px 0 0 0;
     overflow: hidden;
@@ -96,19 +88,6 @@ br.water {
 
 /* - - - - - - - - - */
 
-a {
-    color: var(--a_strongblue);
-    text-decoration: none;
-    cursor: pointer;
-    
-}
-
-a:hover:active {
-    color: var(--a_yellow);
-}
-
-/* - - - - - - - - - */
-
 button,
 button:hover,
 button:hover:active,
@@ -120,14 +99,14 @@ a.button.active {
     color: var(--white);
 }
 
-button.light,
-button.light:hover,
-button.light:hover:active,
-button.light.active,
-a.button.light,
-a.button.light:hover,
-a.button.light:hover:active,
-a.button.light.active {
+button.lightmode,
+button.lightmode:hover,
+button.lightmode:hover:active,
+button.lightmode.active,
+a.button.lightmode,
+a.button.lightmode:hover,
+a.button.lightmode:hover:active,
+a.button.lightmode.active {
     color: var(--black);
 }
 
@@ -144,7 +123,8 @@ a.button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 15px;
+    width: fit-content;
+    padding: 5px 15px;
     color: var(--white);
     background-color: var(--a_darkgray);
     border: 1px solid var(--a_lightblue);
@@ -152,8 +132,8 @@ a.button {
 }
 
 
-button.light,
-a.button.light {
+button.lightmode,
+a.button.lightmode {
     background-color: var(--white);
 }
 
@@ -167,8 +147,8 @@ a.button:hover {
     background-color: var(--buttonhover);
 }
 
-button.light:hover,
-a.button.light:hover {
+button.lightmode:hover,
+a.button.lightmode:hover {
     background-color: var(--lightbuttonhover);
 }
 
@@ -184,23 +164,29 @@ a.button:hover {
     transition: 10ms;
 }
 
+.buttons {
+    display: flex;
+}
+
+.buttons > button,
+.buttons > a.button {
+    margin: 0 5px;
+}
+
 /* - - - - - - - - - */
 
 img {
-    pointer-events: none;
-}
-
-img:not(.frames img) {
     display: inline-block;
     max-width: 100%;
+    pointer-events: none;
 }
 
 /* - - - - - - - - - */
 
 table {
+    width: 100%;
     background-color: var(--a_darkgray);
     text-align: left;
-    margin: 0 15px;
 }
 
 th,
@@ -210,12 +196,16 @@ td {
 }
 
 th {
-    background-color: var(--a_lightblue);
+    width: 30%;
     padding-right: 15px;
+    background-color: var(--a_lightblue);
+    color: var(--white);
 }
 
 td {
-    background-color: var(--a_lightgray);
+    width: 70%;
+    background-color: var(--white);
+    color: var(--black);
 }
 
 td.tablebreak,
@@ -225,7 +215,8 @@ table.transparent td {
     background-color: transparent;
 }
 
-table.transparent {
+table.transparent th,
+table.transparent td {
     color: var(--black);
 }
 
@@ -260,6 +251,12 @@ table.transparent {
 }
 
 /* grid-view */
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .row::after {
     content: "";
@@ -371,6 +368,7 @@ table.transparent {
     align-items: center;
     justify-content: flex-start;
     background-color: var(--a_darkblue);
+    color: var(--white);
     height: 50px;
     overflow: hidden;
     white-space: nowrap;
@@ -403,9 +401,10 @@ table.transparent {
 .card > .actions > button,
 .card > .actions > a.button {
     display: inline-block;
-    text-align: center;
     width: 300px;
+    margin: 0 10px;
     font-size: 12px;
+    text-align: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -422,9 +421,10 @@ table.transparent {
 
 .widescreen {
     width: 100vw;
+    padding: 60px 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .widescreen.left {
@@ -437,8 +437,12 @@ table.transparent {
     padding-right: 5%;
 }
 
-.widescreen > * {
-    color: var(--black);
+.widescreen.center {
+    flex-direction: column;
+}
+
+.widescreen.center > * {
+    width: 100%;
 }
 
 .widescreen.shadow > * {
@@ -493,11 +497,13 @@ table.transparent {
     padding: 15px;
 }
 
-.note, .quote {
+.note {
     margin: 15px;
 }
 
 .quote {
+    margin: 0 15px 0 15px;
+    padding-right: 20px;
     background-color: var(--a_darkgray);
     color: var(--white);
     border-left: 5px solid var(--a_lightblue);

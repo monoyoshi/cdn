@@ -24,6 +24,7 @@ header {
     bottom: 0;
     width: 100%;
     z-index: 90;
+    pointer-events: none;
 }
 
 main {
@@ -402,7 +403,7 @@ table.transparent td {
 .card > .actions > a.button {
     display: inline-block;
     width: 300px;
-    margin: 0 10px;
+    margin-right: 10px;
     padding: 10px 15px;
     font-size: 12px;
     text-align: center;

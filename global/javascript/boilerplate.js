@@ -31,55 +31,50 @@ function header(active) {
 
     $("header").append($("<nav>", {
         css: {
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "center",
             "width": "100%",
             "pointer-events": "none"
         }
     })
-        .append($("<div>", {
+        .append($("<a>", {
+            class: "hnbutton",
+            id: current.index[0],
             css: {
-                "display": "flex",
-                "align-items": "center",
-                "justify-content": "center"
+                "background-color": "lightskyblue"
+            },
+            href: current.index[1]
+        }))
+        .append($("<a>", {
+            class: "hnbutton",
+            id: current.profile[0],
+            css: {
+                "background-color": "lightpink"
+            },
+            href: current.profile[1]
+        }))
+        .append($("<a>", {
+            class: "hnbutton",
+            id: current.projects[0],
+            css: {
+                "background-color": "var(--white)"
+            },
+            href: current.projects[1]
+        }))
+        // these two are here so I can just have a trans flag hehe
+        .append($("<a>", {
+            class: "hnbutton",
+            css: {
+                "background-color": "lightpink"
             }
-        })
-            .append($("<a>", {
-                class: "hnbutton",
-                id: current.index[0],
-                css: {
-                    "background-color": "lightskyblue"
-                },
-                href: current.index[1]
-            }))
-            .append($("<a>", {
-                class: "hnbutton",
-                id: current.profile[0],
-                css: {
-                    "background-color": "lightpink"
-                },
-                href: current.profile[1]
-            }))
-            .append($("<a>", {
-                class: "hnbutton",
-                id: current.projects[0],
-                css: {
-                    "background-color": "var(--white)"
-                },
-                href: current.projects[1]
-            }))
-            // these two are here so I can just have a trans flag hehe
-            .append($("<a>", {
-                class: "hnbutton",
-                css: {
-                    "background-color": "lightpink"
-                }
-            }))
-            .append($("<a>", {
-                class: "hnbutton",
-                css: {
-                    "background-color": "lightskyblue"
-                }
-            }))
-        )
+        }))
+        .append($("<a>", {
+            class: "hnbutton",
+            css: {
+                "background-color": "lightskyblue"
+            }
+        }))
     );
 };
 

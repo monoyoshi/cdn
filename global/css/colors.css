@@ -1,30 +1,31 @@
 :root {
-    --black: rgb(0, 5, 10);
-    --shadow: rgba(0, 5, 10, 0.3);
-    --strongshadow: rgba(0, 5, 10, 0.6);
+    --black: rgb(0, 9, 18);
+    --shadow: rgba(0, 9, 18, 0.3);
+    --strongshadow: rgba(0, 9, 18, 0.6);
 
-    --white: rgb(245, 250, 255);
-    --glow: rgba(245, 250, 255, 0.3);
-    --strongglow: rgba(245, 250, 255, 0.6);
+    --white: rgb(234, 243, 252);
+    --glow: rgba(234, 243, 252, 0.3);
+    --strongglow: rgba(234, 243, 252, 0.6);
 
     /* a = accent */
-    --a_blue: rgb(55, 115, 185);
-        --a_darkblue: rgb(25, 65, 115);
-        --a_strongblue: rgb(80, 160, 255);
-        --a_lightblue: rgb(115, 190, 235);
-    --a_bluegray: rgb(100, 110, 145);
-    --a_gray: rgb(100, 100, 105);
-        --a_darkgray: rgb(40, 40, 45);
-        --a_lightgray: rgb(190, 190, 195);
-    --a_yellow: rgb(235, 210, 75);
-    --a_green: rgb(5, 155, 135);
-    --a_magenta: rgb(240, 65, 180);
+    --a_blue: #3773b9;
+        --a_darkblue: rgb(27, 63, 117);
+        --a_strongblue: rgb(81, 162, 252);
+        --a_lightblue: rgb(117, 189, 234);
+    --a_bluegray: rgb(99, 108, 144);
+    --a_gray: #414646;
+        --a_darkgray: rgb(36, 36, 45);
+        --a_lightgray: rgb(189, 189, 198);
+    --a_yellow: rgb(234, 207, 72);
+    --a_green: rgb(9, 153, 135);
+    --a_red: rgb(234, 45, 18);
+    --a_magenta: rgb(243, 63, 180);
 
-    --bg0_p: rgb(30, 45, 65);
-    --bg0_s: rgb(40, 40, 45);
-    --bg1_p: rgb(20, 40, 65);
-    --bg1_s: rgb(70, 105, 140);
+    --bg0_p: rgb(27, 45, 63);
+    --bg0_s: rgb(36, 36, 45);
+    --bg1_p: rgb(18, 36, 63);
+    --bg1_s: rgb(72, 108, 144);
 
-    --buttonhover: rgb(80, 125, 160);
-    --lightbuttonhover: rgb(180, 220, 245);
+    --buttonhover: rgb(81, 126, 162);
+    --lightbuttonhover: rgb(180, 216, 243);
 }

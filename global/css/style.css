@@ -19,7 +19,6 @@ body {
 }
 
 header {
-    display: flex;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -33,7 +32,7 @@ main {
     margin: 0;
 }
 
-main.flex {
+main.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -255,8 +254,7 @@ table.transparent td {
 
 .row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .row::after {
@@ -425,8 +423,7 @@ table.transparent td {
     width: 100vw;
     padding: 60px 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
 .widescreen.left {
@@ -440,11 +437,7 @@ table.transparent td {
 }
 
 .widescreen.center {
-    flex-direction: column;
-}
-
-.widescreen.center > * {
-    width: 100%;
+    justify-content: center;
 }
 
 .widescreen.shadow > * {

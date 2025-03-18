@@ -33,10 +33,21 @@ a {
     cursor: pointer;
 }
 
+a.camo {
+    color: var(--black);
+}
+
 a:hover:active {
     color: var(--a_yellow);
 }
 
-.darkmode {
+.darkmode,
+.darkmode a,
+a.darkmode {
     color: var(--white);
+}
+
+.darkmode a:not(.camo),
+a.darkmode:not(.camo) {
+    text-decoration: underline dotted;
 }

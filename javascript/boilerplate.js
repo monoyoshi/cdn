@@ -6,9 +6,10 @@ function header(active) {
     // active = active "section" of the website
     // my funny workaround is just an array
     let current = {
-        index: ["", `https://bladewyrm.dev`],
-        profile: ["", `https://bladewyrm.dev/profile.html`],
-        projects: ["", `https://bladewyrm.dev/projects.html`],
+        index: ["", "https://bladewyrm.dev"],
+        profile: ["", "https://bladewyrm.dev/profile.html"],
+        projects: ["", "https://bladewyrm.dev/projects.html"],
+        vquber: ["", "https://vquber.bladewyrm.dev"],
     };
 
     switch (active) {
@@ -25,6 +26,11 @@ function header(active) {
         case "projects": {
             current.projects[0] = "active";
             current.projects[1] = undefined;
+            break;
+        };
+        case "vtuber": {
+            current.vtuber[0] = "active";
+            current.vtuber[1] = undefined;
             break;
         };
     };
@@ -62,13 +68,15 @@ function header(active) {
             },
             href: current.projects[1]
         }))
-        // these two are here so I can just have a trans flag hehe
         .append($("<a>", {
             class: "hnbutton",
+            id: current.vquber[0],
             css: {
                 "background-color": "lightpink"
-            }
+            },
+            href: current.vquber[1]
         }))
+        // tis is here so I can just have a trans flag hehe
         .append($("<a>", {
             class: "hnbutton",
             css: {
@@ -93,7 +101,7 @@ function footer() {
             .html("made with love and pure hyperfixation by <b>kyu(ren)</b>")
         )
         .append($("<img>", {
-            src: `https://cdn.bladewyrm.dev/global/images/kyurem/sprite-animated_kyurem.png`,
+            src: `https://cdn.bladewyrm.dev/images/kyurem/sprite-animated_kyurem.png`,
             height: 32,
             width: 32,
             css: {

@@ -27,7 +27,6 @@ header {
     bottom: 0;
     width: 100%;
     z-index: 90;
-    pointer-events: none;
 }
 
 main {

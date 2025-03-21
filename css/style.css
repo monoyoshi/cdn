@@ -9,13 +9,17 @@
     scroll-behavior: smooth;
 }
 
+body,
+.gbg {
+    background-image: linear-gradient(var(--vpdeg), var(--bg0_p), var(--bg0_s));
+}
+
 body {
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     --vpdeg: 190deg;
-    background-image: linear-gradient(var(--vpdeg), var(--bg0_p), var(--bg0_s));
 }
 
 header {
@@ -179,6 +183,7 @@ img {
     display: inline-block;
     max-width: 100%;
     pointer-events: none;
+    user-select: none;
 }
 
 /* - - - - - - - - - */
@@ -263,8 +268,22 @@ table.transparent td {
     display: table;
 }
 
+.row.center {
+    justify-content: center;
+    align-items: center;
+}
+
 [class*="column-"] {
     float: left;
+}
+
+[class*="column-"].bgfloat {
+    padding: 10px 20px;
+}
+
+[class*="column-"].bgfloat.shadow {
+    background-color: var(--strongshadow);
+    color: var(--white);
 }
 
 .column-5 {

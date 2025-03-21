@@ -2,14 +2,14 @@
 // I wanna have a header and a footer I can easily update through one file
 // especially since it's static across all pages
 
-function header(active) {
+function preheader(active) {
     // active = active "section" of the website
     // my funny workaround is just an array
     let current = {
         index: ["", "https://bladewyrm.dev"],
         profile: ["", "https://bladewyrm.dev/profile.html"],
         projects: ["", "https://bladewyrm.dev/projects.html"],
-        vquber: ["", "https://vquber.bladewyrm.dev"],
+        vquber: ["", "https://vquber.bladewyrm.dev"]
     };
 
     switch (active) {
@@ -34,6 +34,12 @@ function header(active) {
             break;
         };
     };
+
+    return current;
+};
+
+function header(active) {
+    let current = preheader(active);
 
     $("header").append($("<nav>", {
         css: {

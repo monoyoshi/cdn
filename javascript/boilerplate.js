@@ -51,7 +51,7 @@ function header(active) {
         }
     })
         .append($("<a>", {
-            class: "hnbutton",
+            class: "dluibtn",
             id: current.index[0],
             css: {
                 "background-color": "lightskyblue"
@@ -59,7 +59,7 @@ function header(active) {
             href: current.index[1]
         }))
         .append($("<a>", {
-            class: "hnbutton",
+            class: "dluibtn",
             id: current.profile[0],
             css: {
                 "background-color": "lightpink"
@@ -67,7 +67,7 @@ function header(active) {
             href: current.profile[1]
         }))
         .append($("<a>", {
-            class: "hnbutton",
+            class: "dluibtn",
             id: current.projects[0],
             css: {
                 "background-color": "var(--white)"
@@ -75,7 +75,7 @@ function header(active) {
             href: current.projects[1]
         }))
         .append($("<a>", {
-            class: "hnbutton",
+            class: "dluibtn",
             id: current.vquber[0],
             css: {
                 "background-color": "lightpink"
@@ -84,7 +84,7 @@ function header(active) {
         }))
         // tis is here so I can just have a trans flag hehe
         .append($("<a>", {
-            class: "hnbutton",
+            class: "dluibtn",
             css: {
                 "background-color": "lightskyblue"
             }

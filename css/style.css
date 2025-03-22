@@ -9,17 +9,17 @@
     scroll-behavior: smooth;
 }
 
-body,
-.gbg {
-    background-image: linear-gradient(var(--vpdeg), var(--bg0_p), var(--bg0_s));
-}
-
 body {
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
     --vpdeg: 190deg;
+}
+
+body,
+.gbg {
+    background-image: linear-gradient(var(--vpdeg), var(--a_darkerblue), var(--a_darkgray));
 }
 
 header {
@@ -35,7 +35,7 @@ main {
     margin: 0;
 }
 
-main.container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -126,12 +126,13 @@ a.button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: fit-content;
-    padding: 5px 15px;
+    width: max-content;
+    padding: 0.5rem 1.5rem;
     color: var(--white);
     background-color: var(--a_darkgray);
     border: 1px solid var(--a_lightblue);
-    border-radius: 5px;
+    border-radius: 100px;
+    text-wrap: nowrap;
 }
 
 
@@ -167,13 +168,22 @@ a.button:hover {
     transition: 10ms;
 }
 
-.buttons {
+.btnc {
     display: flex;
+    margin: 1rem 0;
+    overflow-x: scroll;
 }
 
-.buttons > button,
-.buttons > a.button {
-    margin: 0 5px;
+.btnc > * {
+    margin: 0 0.5rem;
+}
+
+.btnc > *:first-child {
+    margin-left: 0;
+}
+
+.btnc > *:last-child {
+    margin-right: 0;
 }
 
 /* - - - - - - - - - */
@@ -196,12 +206,12 @@ table {
 th,
 td {
     vertical-align: baseline;
-    padding: 0 5px;
+    padding: 0 0.5rem;
 }
 
 th {
     width: 30%;
-    padding-right: 15px;
+    padding-right: 10%;
     background-color: var(--a_lightblue);
     color: var(--white);
 }
@@ -231,7 +241,7 @@ table.transparent td {
 /* - - - - - - - - - */
 
 .bgimage,
-.hnbutton {
+.dluibtn {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -239,18 +249,24 @@ table.transparent td {
 
 /* - - - - - - - - - */
 
-.hnbutton {
+/* dl ui button */
+
+.dluibtn {
     width: 100px;
     height: 100px;
-    margin: 0 20px 20px 0;
+    margin: 0 10px 20px;
     pointer-events: auto;
 }
 
-.hnbutton:last-child {
+.dluibtn:first-child {
+    margin-left: 0;
+}
+
+.dluibtn:last-child {
     margin-right: 0;
 }
 
-.hnbutton#active {
+.dluibtn#active {
     cursor: pointer;
 }
 
@@ -507,19 +523,20 @@ table.transparent td {
 
 /* indented text (notes, quotes, etc.) */
 .textbox, .quote {
-    padding: 15px;
+    padding: 15px 20px;
 }
 
+.quote,
 .note {
-    margin: 15px;
-}
-
-.quote {
-    margin: 10px 15px;
-    padding-right: 20px;
+    width: 75%;
+    margin: 1rem 2rem;
+    padding-right: 4rem;
     background-color: var(--a_darkgray);
     color: var(--white);
     border-left: 5px solid var(--a_lightblue);
+}
+
+.quote {
     font-style: italic;
 }
 
@@ -590,14 +607,5 @@ table.transparent td {
 /* - - - - - - - - - */
 /* ids */
 /* - - - - - - - - - */
-
-#viewport {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -99;
-}
 
 /* - - - - - - - - - */

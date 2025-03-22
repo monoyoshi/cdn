@@ -1,31 +1,25 @@
 :root {
-    --black: rgb(0, 9, 18);
-    --shadow: rgba(0, 9, 18, 0.3);
-    --strongshadow: rgba(0, 9, 18, 0.6);
+    --black: #000912;
+    --shadow: #0009124d;
+    --strongshadow: #00091299;
 
-    --white: rgb(234, 243, 252);
-    --glow: rgba(234, 243, 252, 0.3);
-    --strongglow: rgba(234, 243, 252, 0.6);
+    --white: #eaf3fc;
+    --glow: #eaf3fc4d;
+    --strongglow: #eaf3fc99;
 
     /* a = accent */
-    --a_blue: #3773b9;
-        --a_darkblue: rgb(27, 63, 117);
-        --a_strongblue: rgb(81, 162, 252);
-        --a_lightblue: rgb(117, 189, 234);
-    --a_bluegray: rgb(99, 108, 144);
-    --a_gray: #414646;
-        --a_darkgray: rgb(36, 36, 45);
-        --a_lightgray: rgb(189, 189, 198);
-    --a_yellow: rgb(234, 207, 72);
-    --a_green: rgb(9, 153, 135);
-    --a_red: rgb(234, 45, 18);
-    --a_magenta: rgb(243, 63, 180);
+    --a_bluegray: #636c90;
+        --a_blue: #3773b9;
+            --a_darkerblue: #1b2d3f;
+            --a_darkblue: #1b3f75;
+            --a_strongblue: #51a2fc;
+            --a_lightblue: #75bdea;
+        --a_gray: #414646;
+            --a_darkgray: #24242d;
+            --a_lightgray: #869496;
+    --a_bluegreen: #2da0c8;
+    --a_yellow: #eacf48;
 
-    --bg0_p: rgb(27, 45, 63);
-    --bg0_s: rgb(36, 36, 45);
-    --bg1_p: rgb(18, 36, 63);
-    --bg1_s: rgb(72, 108, 144);
-
-    --buttonhover: rgb(81, 126, 162);
-    --lightbuttonhover: rgb(180, 216, 243);
+    --buttonhover: #517ea2;
+    --lightbuttonhover: #b4d8f3;
 }

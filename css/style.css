@@ -58,7 +58,7 @@ footer {
     white-space: nowrap;
     opacity: 0.3;
     transition-duration: 500ms;
-    z-index: 81;
+    z-index: 99;
 }
 
 footer:hover {

@@ -14,11 +14,20 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    --vpdeg: 190deg;
 }
 
-body,
+#viewport {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+}
+
+#viewport,
 .gbg {
+    --vpdeg: 190deg;
     background-image: linear-gradient(var(--vpdeg), var(--a_darkerblue), var(--a_darkgray));
 }
 
@@ -460,16 +469,6 @@ table.transparent td {
     flex-direction: column;
 }
 
-.widescreen.left {
-    justify-content: flex-start;
-    padding-left: 5%;
-}
-
-.widescreen.right {
-    justify-content: flex-end;
-    padding-right: 5%;
-}
-
 .widescreen.center {
     justify-content: center;
 }
@@ -584,22 +583,6 @@ table.transparent td {
     border-width: 10px;
     border-style: solid;
     border-color: var(--a_darkgray) transparent transparent transparent;
-}
-
-/* - - - - - - - - - */
-
-/* progress bar */
-.progressbar {
-    height: 10px;
-    width: 100%;
-    border-radius: 5px;
-    background-color: var(--white);
-}
-
-.progressbar .indicator {
-    height: 100%;
-    border-radius: 5px;
-    background-color: var(--a_lightblue);
 }
 
 /* - - - - - - - - - */

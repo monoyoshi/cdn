@@ -27,27 +27,28 @@ code {
     background-color: var(--a_strongblue);
 }
 
-a {
+a,
+a.default {
     color: var(--a_strongblue);
     text-decoration: none;
     cursor: pointer;
-}
-
-a.camo {
-    color: var(--black);
 }
 
 a:hover:active {
     color: var(--a_yellow);
 }
 
-.darkmode,
-.darkmode a,
-a.darkmode {
+a.camo {
+    color: inherit;
+}
+
+.darkmode {
     color: var(--white);
 }
 
+.darkmode *a:not(.button),
 .darkmode a:not(.camo),
-a.darkmode:not(.camo) {
+a.darkmode:not(.camo),
+a.dul {
     text-decoration: underline dotted;
 }

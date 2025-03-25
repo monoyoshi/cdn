@@ -1,11 +1,15 @@
 @media only screen and not (max-aspect-ratio: 1) {
-    .mobileshow {
+    .mobileshow, .msheader, .msactions {
         display: none;
     }
 }
 
 
 @media only screen and (max-aspect-ratio: 1) {
+    .mobilehide {
+        display: none;
+    }
+
     html {
         font-size: 12px;
     }
@@ -22,8 +26,74 @@
         margin: 0 10px 10px 0;
     }
 
-    .mobilehide {
-        display: none;
+    .mscontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .card,
+    .mscard {
+        width: calc(100vw - 20px);
+        max-width: none;
+        height: calc(100vh - 140px);
+        margin: 0;
+    }
+
+    .mscard {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--white);
+        min-height: 270px;
+        box-shadow: 5px 5px 0 var(--shadow);
+    }
+
+    .msheader {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: var(--a_darkblue);
+        color: var(--white);
+        height: 45px;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 1rem;
+        font-size: 16px;
+        font-weight: bold;
+        user-select: none;
+    }
+
+    .card > .content,
+    .mscontent {
+        height: calc(100% - 65px);
+        margin: 10px;
+        overflow: scroll;
+    }
+
+    .mscontent th {
+        border-right: 1px solid var(--black);
+    }
+
+    .darkmode {
+        color: inherit;
+    }
+
+    .card > .content:not(.content.noactions) {
+        height: calc(100% - 200px);
+    }
+
+    .card > .actions {
+        flex-direction: column;
+        height: 140px;
+        padding: 0;
+    }
+
+    .card > .actions > button,
+    .card > .actions > a.button {
+        margin: 10px 0;
     }
 
     .row {
@@ -38,30 +108,22 @@
         width: 100%;
     }
 
-    .card {
-        width: calc(100vw - 20px);
-        max-width: none;
-        height: calc(100vh - 140px);
-        margin: 0;
-    }
-
-    .card > .content {
-        margin: 10px;
-    }
-
-    .card > .content:not(.content.noactions) {
-        margin-bottom: 0px;
-    }
-
-    .card > .actions > button,
-    .card > .actions > a.button {
-        width: 150px;
-    }
-
     .widescreen {
         padding: 30px 5%;
     }
 
+    .content > .widescreen,
+    .mscontent > .widescreen {
+        padding: 0;
+    }
+
+    .tooltip {
+        text-decoration: none;
+    }
+
+    .ttpopup {
+        display: none;
+    }
     /* - - - - - - - - - */
 }
 

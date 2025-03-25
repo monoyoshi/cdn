@@ -5,9 +5,10 @@
 function main404() {
     $("main")
         .append($("<div>", {
-            class: "widescreen center darkmode",
+            class: "widescreen darkmode",
             css: {
-                "height": "100vh"
+                "height": "100vh",
+                "margin-top": "90px"
             }
         })
             .append($("<div>", {
@@ -17,7 +18,7 @@ function main404() {
                     class: "column-15"
                 }))
                 .append($("<div>", {
-                    class: "column-50"
+                    class: "column-40"
                 })
                     .append($("<div>", {
                         class: "h1"
@@ -34,13 +35,21 @@ function main404() {
                     )
                 )
                 .append($("<div>", {
-                    class: "column-20"
+                    class: "column-30"
                 })
                     .append($("<img>", {
                         src: "https://cdn.bladewyrm.dev/images/404.gif",
-                        alt: "get 404'd idiot (if the image doesn't load then maybe I'm the idiot here)"
+                        alt: "get 404'd idiot (if the image doesn't load then maybe I'm the idiot here)",
+                        css: {
+                            "width": "100%"
+                        }
                     }))
                 )
             )
-        );
+        )
+        .append("<div>", {
+            css: {
+                "margin-bottom": "90px"
+            }
+        });
 };

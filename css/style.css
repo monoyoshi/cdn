@@ -300,13 +300,30 @@ td {
     float: left;
 }
 
-[class*="column-"].bgfloat {
-    padding: 10px 20px;
+[class*="column-"].float {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 50px var(--strongshadow);
 }
 
-[class*="column-"].bgfloat.shadow {
+[class*="column-"].shadow {
     background-color: var(--strongshadow);
     color: var(--white);
+}
+
+.htbgd,
+.htbgl {
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.htbgd {
+    background-image: url('../images/halftone/dark.svg');
+}
+
+.htbgl {
+    background-image: url('../images/halftone/light.svg');
 }
 
 .column-5 {
@@ -410,10 +427,10 @@ td {
     justify-content: flex-start;
     background-color: var(--a_darkblue);
     color: var(--white);
-    height: 50px;
+    height: 45px;
     overflow: hidden;
     white-space: nowrap;
-    padding: 15px;
+    padding: 1rem;
     font-size: 16px;
     font-weight: bold;
     user-select: none;
@@ -444,7 +461,7 @@ td {
     width: 300px;
     margin: 10px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 1rem;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -467,9 +484,13 @@ td {
 
 .widescreen {
     width: 100%;
-    padding: 60px 0;
     display: flex;
     flex-direction: column;
+}
+
+.widescreen.fullpage {
+    height: 100vh;
+    padding-bottom: 90px;
 }
 
 .widescreen.center {
@@ -561,7 +582,7 @@ td {
     margin-top: -20px;
     background-color: var(--a_darkgray);
     color: var(--white);
-    border-radius: 10px;
+    border-radius: 1rem;
     text-align: center;
     font-weight: normal;
     padding: 10px 15px 10px 15px;

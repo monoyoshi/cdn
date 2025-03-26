@@ -113,7 +113,12 @@
     }
 
     .widescreen {
-        padding: 30px 5%;
+        padding: 30px 1rem;
+    }
+
+    .widescreen.fullpage {
+        padding-top: 36px;
+        padding-bottom: 70px;
     }
 
     .content > .widescreen,

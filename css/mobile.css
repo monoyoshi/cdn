@@ -4,7 +4,6 @@
     }
 }
 
-
 @media only screen and (max-aspect-ratio: 1) {
     .mobilehide {
         display: none;
@@ -15,9 +14,14 @@
     }
 
     footer {
+        justify-content: center;
         top: 0;
-        padding: 0 0 0 15px;
-        border-radius: 0 0 0 15px;
+        left: 0;
+        width: 100%;
+    }
+
+    footer > div {
+        top: 12px;
     }
 
     .dluibtn {
@@ -46,8 +50,8 @@
     .mscard {
         display: flex;
         flex-direction: column;
-        background-color: var(--white);
         min-height: 270px;
+        background-color: var(--white);
         box-shadow: 5px 5px 0 var(--shadow);
     }
 
@@ -77,7 +81,7 @@
         border-right: 1px solid var(--black);
     }
 
-    .darkmode {
+    .mscard .darkmode {
         color: inherit;
     }
 

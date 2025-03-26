@@ -35,7 +35,7 @@ header {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 90;
+    z-index: 81;
 }
 
 main {
@@ -54,19 +54,25 @@ main {
 footer {
     display: flex;
     justify-content: flex-end;
-    align-content: space-evenly;
     position: fixed;
-    right: 0;
-    bottom: 0;
-    height: 42px;
-    background-color: var(--black);
+    right: 12px;
+    bottom: 12px;
+    height: 36px;
     color: var(--white);
-    padding: 0 0 10px 16px;
-    border-radius: 15px 0 0 0;
-    overflow: hidden;
     opacity: 0.3;
+    z-index: 90;
+    overflow: hidden;
+    user-select: none;
     transition-duration: 500ms;
-    z-index: 99;
+}
+
+footer > div {
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 10px;
+    position: relative;
+    top: 14px;
+    padding-right: 12px;
+    color: var(--lgray);
 }
 
 footer:hover {
@@ -250,7 +256,7 @@ td {
 
 /* - - - - - - - - - */
 
-/* dl ui button */
+/* dl ui buttons (header) */
 
 .dluibtn {
     width: 100px;
@@ -271,8 +277,9 @@ td {
     cursor: pointer;
 }
 
-/* grid-view */
+/* - - - - - - - - - */
 
+/* row/column grid view */
 .row {
     display: flex;
     width: 100%;
@@ -579,11 +586,5 @@ td {
     border-style: solid;
     border-color: var(--a_darkgray) transparent transparent transparent;
 }
-
-/* - - - - - - - - - */
-
-/* - - - - - - - - - */
-/* ids */
-/* - - - - - - - - - */
 
 /* - - - - - - - - - */

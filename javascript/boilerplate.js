@@ -9,7 +9,8 @@ function preheader(active) {
         index: ["", "https://bladewyrm.dev"],
         profile: ["", "https://bladewyrm.dev/profile.html"],
         projects: ["", "https://bladewyrm.dev/projects.html"],
-        vquber: ["", "https://vquber.bladewyrm.dev"]
+        vquber: ["", "https://vquber.bladewyrm.dev"],
+        toucafe: ["", "https://tou-cafe.bladewyrm.dev"]
     };
 
     switch (active) {
@@ -54,7 +55,7 @@ function header(active) {
             class: "dluibtn",
             id: current.index[0],
             css: {
-                "background-color": "lightskyblue"
+                "background-color": "var(--a_lightgray)"
             },
             href: current.index[1]
         }))
@@ -62,7 +63,7 @@ function header(active) {
             class: "dluibtn",
             id: current.profile[0],
             css: {
-                "background-color": "lightpink"
+                "background-color": "var(--a_lightblue)"
             },
             href: current.profile[1]
         }))
@@ -78,41 +79,31 @@ function header(active) {
             class: "dluibtn",
             id: current.vquber[0],
             css: {
-                "background-color": "lightpink"
+                "background-color": "var(--a_lightblue)"
             },
             href: current.vquber[1]
         }))
         // tis is here so I can just have a trans flag hehe
         .append($("<a>", {
             class: "dluibtn",
+            id: current.toucafe[0],
             css: {
-                "background-color": "lightskyblue"
-            }
+                "background-color": "var(--a_lightgray)"
+            },
+            href: current.toucafe[1]
         }))
     );
 };
 
 function footer() {
     $("footer")
-        .append($("<div>", {
-            css: {
-                "position": "relative",
-                "top": "13px",
-                "font-family": `"RocknRoll One", sans-serif`,
-                "font-size": "10px",
-                "color": "var(--lgray)",
-                "user-select": "none"
-            }
-        })
-            .html("made with love and pure hyperfixation by <b>kyu(ren)</b>")
+        .append($("<div>")
+            .html("made with love and pure hyperfixation from <b>kyu(ren)</b>")
         )
         .append($("<img>", {
             src: `https://cdn.bladewyrm.dev/images/kyurem/sprite-animated_kyurem.png`,
             height: 32,
-            width: 32,
-            css: {
-                "margin": "0 10px"
-            }
+            width: 32
         })
     );
 };

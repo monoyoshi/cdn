@@ -82,11 +82,7 @@ footer:hover {
 /* - - - - - - - - - */
 
 hr {
-    border-color: var(--white);
-}
-
-hr.lightmode {
-    border-color: var(--black);
+    color: inherit;
 }
 
 /* - - - - - - - - - */

@@ -51,47 +51,62 @@ function header(active) {
             "pointer-events": "none"
         }
     })
-        .append($("<a>", {
-            class: "dluibtn",
-            id: current.index[0],
-            css: {
-                "background-color": "var(--a_lightgray)"
-            },
-            href: current.index[1]
-        }))
-        .append($("<a>", {
-            class: "dluibtn",
-            id: current.profile[0],
-            css: {
-                "background-color": "var(--a_lightblue)"
-            },
-            href: current.profile[1]
-        }))
-        .append($("<a>", {
-            class: "dluibtn",
-            id: current.projects[0],
-            css: {
-                "background-color": "var(--white)"
-            },
-            href: current.projects[1]
-        }))
-        .append($("<a>", {
-            class: "dluibtn",
-            id: current.vquber[0],
-            css: {
-                "background-color": "var(--a_lightblue)"
-            },
-            href: current.vquber[1]
-        }))
+        .append(
+            $("<a>", {
+                class: "dluibtn",
+                id: current.index[0],
+                css: {
+                    "background-color": "var(--a_lightgray)"
+                },
+                href: current.index[1]
+            })
+                .text("home")
+        )
+        .append(
+            $("<a>", {
+                class: "dluibtn",
+                id: current.profile[0],
+                css: {
+                    "background-color": "var(--a_lightblue)"
+                },
+                href: current.profile[1]
+            })
+            .text("profile")
+        )
+        .append(
+            $("<a>", {
+                class: "dluibtn",
+                id: current.projects[0],
+                css: {
+                    "background-color": "var(--white)"
+                },
+                href: current.projects[1]
+            })
+            .text("projects")
+        )
+        .append(
+            $("<a>", {
+                class: "dluibtn",
+                id: current.vquber[0],
+                css: {
+                    "background-color": "var(--a_lightblue)"
+                },
+                href: current.vquber[1]
+            })
+            .text("redirect :)")
+        )
         // tis is here so I can just have a trans flag hehe
-        .append($("<a>", {
-            class: "dluibtn",
-            id: current.toucafe[0],
-            css: {
-                "background-color": "var(--a_lightgray)"
-            },
-            href: current.toucafe[1]
-        }))
+        .append(
+            $("<a>", {
+                class: "dluibtn",
+                id: current.toucafe[0],
+                css: {
+                    "background-color": "var(--a_lightgray)"
+                },
+                href: current.toucafe[1]
+            })
+            .text("tou café")
+        )
     );
 };
 

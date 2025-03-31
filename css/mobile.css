@@ -45,6 +45,8 @@
         max-width: none;
         height: calc(100vh - 140px);
         margin: 0;
+        border: 3px solid var(--black);
+        box-shadow: 10px 10px 0 var(--strongshadow);
     }
 
     .mscard {
@@ -52,27 +54,36 @@
         flex-direction: column;
         min-height: 270px;
         background-color: var(--white);
-        box-shadow: 5px 5px 0 var(--shadow);
+        box-shadow: 0 10px 50px var(--strongshadow);
+    }
+
+    .card > .header,
+    .msheader {
+        background-image: url("../images/halftone/header_short.svg");
     }
 
     .msheader {
         display: flex;
-        align-items: center;
         justify-content: flex-start;
-        background-color: var(--a_darkblue);
-        color: var(--white);
-        height: 45px;
-        overflow: hidden;
-        white-space: nowrap;
+        align-items: center;
+        height: 48px;
+        min-height: 48px;
+        max-height: 48px;
         padding: 1rem;
+        background-color: var(--a_darkblue);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        color: var(--white);
         font-size: 16px;
         font-weight: bold;
+        overflow: hidden;
         user-select: none;
     }
 
     .card > .content,
     .mscontent {
-        height: calc(100% - 65px);
+        height: 100%;
         margin: 10px;
         overflow: scroll;
     }
@@ -86,7 +97,7 @@
     }
 
     .card > .content:not(.content.noactions) {
-        height: calc(100% - 200px);
+        height: calc(100% - 188px);
     }
 
     .card > .actions {
@@ -97,6 +108,7 @@
 
     .card > .actions > button,
     .card > .actions > a.button {
+        width: 90%;
         margin: 10px 0;
     }
 

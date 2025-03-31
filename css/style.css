@@ -16,21 +16,6 @@ body {
     height: 100vh;
 }
 
-#viewport {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -99;
-}
-
-#viewport,
-.gbg {
-    --vpdeg: 190deg;
-    background-image: linear-gradient(var(--vpdeg), var(--a_darkerblue), var(--a_darkgray));
-}
-
 header {
     position: fixed;
     bottom: 0;
@@ -109,19 +94,9 @@ a.button,
 a.button:hover,
 a.button:hover:active,
 a.button.active {
-    color: var(--white);
-    text-decoration: none;
-}
-
-button.lightmode,
-button.lightmode:hover,
-button.lightmode:hover:active,
-button.lightmode.active,
-a.button.lightmode,
-a.button.lightmode:hover,
-a.button.lightmode:hover:active,
-a.button.lightmode.active {
     color: var(--black);
+    text-decoration: none;
+    user-select: none;
 }
 
 button,
@@ -139,16 +114,11 @@ a.button {
     align-items: center;
     width: max-content;
     padding: 0.5rem 1.5rem;
-    background-color: var(--a_darkgray);
-    border: 1px solid var(--a_lightblue);
-    border-radius: 100px;
-    text-wrap: nowrap;
-}
-
-
-button.lightmode,
-a.button.lightmode {
     background-color: var(--white);
+    border: 3px solid var(--black);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 0 var(--shadow);
+    text-wrap: nowrap;
 }
 
 button:hover,
@@ -156,26 +126,24 @@ a.button:hover {
     background-color: var(--buttonhover);
 }
 
-button.lightmode:hover,
-a.button.lightmode:hover {
-    background-color: var(--lightbuttonhover);
-}
-
 button:hover:active,
 button.active,
 a.button:hover:active,
 a.button.active {
     background-color: var(--a_lightblue);
+    box-shadow: 1px 1px 0 var(--shadow);
+    transform: translate(4px, 4px);
 }
 
 button:hover:active,
-a.button:hover {
+a.button:hover:active {
     transition: 10ms;
 }
 
 .buttons {
     display: flex;
-    margin: 1rem 0;
+    padding: 1rem;
+    padding-top: 0.5rem;
     overflow-x: scroll;
 }
 
@@ -410,39 +378,56 @@ td {
 .card {
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom, var(--black) 24px, var(--white) 24px);
     background-color: var(--white);
     width: 65vw;
     max-width: 1000px;
     height: calc(100vh - 280px);
     min-height: 270px;
-    margin: 0 90px;
-    box-shadow: 5px 5px 0 var(--shadow);
+    border: 3px solid var(--black);
+    border-radius: 1rem;
+    box-shadow: 10px 10px 0 var(--strongshadow);
+    overflow: hidden;
+}
+
+.card:has(.actions) {
+    background: linear-gradient(to bottom, var(--black) 24px, var(--white) 24px, var(--white) calc(100% - 50px), var(--black) calc(100% - 50px));
+}
+
+.card:not(.card:has(.actions)) {
+    background: url("../images/halftone/light.svg") bottom right no-repeat, linear-gradient(to bottom, var(--black) 24px, var(--white) 24px);
+    background-size: 65% auto;
 }
 
 .card > .header {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
-    background-color: var(--a_darkblue);
-    color: var(--white);
-    height: 45px;
-    overflow: hidden;
-    white-space: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
     padding: 1rem;
+    padding-left: 1.5rem;
+    background: var(--a_darkblue) url("../images/halftone/header_long.svg") right no-repeat;
+    background-size: contain;
+    border-bottom: 3px solid var(--black);
+    color: var(--white);
     font-size: 16px;
     font-weight: bold;
+    overflow: hidden;
     user-select: none;
 }
 
 .card > .content {
     height: 100%;
-    margin: 25px;
+    margin: 1rem;
     color: var(--black);
     overflow: scroll;
 }
 
-.card > .content:not(.content.noactions) {
-    margin-bottom: 0px;
+.card > .content.noactions {
+    padding-bottom: 9rem;
 }
 
 .card > .actions {
@@ -450,20 +435,30 @@ td {
     justify-content: center;
     align-items: center;
     height: 100px;
+    min-height: 100px;
     padding: 0 10px;
-    box-shadow: 0px -5px 50px var(--shadow);
+    background-color: var(--lightgray);
+    background-size: 65% auto;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-image: url("../images/halftone/dark.svg");
+    border-top: 3px solid var(--black);
 }
 
 .card > .actions > button,
 .card > .actions > a.button {
-    width: 300px;
+    width: 45%;
     margin: 10px;
-    font-size: 16px;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.card > .actions > button:hover:active,
+.card > .actions > a.button:hover {
+    transition: 10ms;
 }
     
 .card > .actions > button:first-child,
@@ -607,3 +602,18 @@ td {
 }
 
 /* - - - - - - - - - */
+
+#viewport,
+.gbg {
+    --vpdeg: 190deg;
+    background-image: linear-gradient(var(--vpdeg), var(--a_darkerblue), var(--a_darkgray));
+}
+
+#viewport {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
+}

@@ -103,7 +103,7 @@ button,
 button.active,
 a.button,
 a.button.active {
-    transition: 300ms;
+    transition-duration: 300ms;
 }
 
 button,

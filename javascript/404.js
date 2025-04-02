@@ -7,16 +7,13 @@ function main404() {
         .append($("<div>", {
             class: "widescreen darkmode",
             css: {
-                "height": "100vh",
-                "margin-top": "90px"
+                "height": "calc(100vh - 140px)",
+                "padding-top": "90px"
             }
         })
             .append($("<div>", {
-                class: "row"
+                class: "row center"
             })
-                .append($("<div>", {
-                    class: "column-15"
-                }))
                 .append($("<div>", {
                     class: "column-40"
                 })

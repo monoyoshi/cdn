@@ -122,27 +122,15 @@
 
     [class*="column-"] {
         width: 100%;
+        padding: 0 1rem;
     }
+    
 
     [class*="column-"].float {
-        height: calc(100vh - 140px);
-        padding: 1rem 2rem;
-        border-radius: 1rem;
+        width: calc(100vw);
         box-shadow: 0 10px 50px var(--strongshadow);
+        border-radius: 0;
         overflow: scroll;
-    }
-
-    .widescreen {
-        padding: 30px 1rem;
-    }
-
-    .widescreen.fullpage {
-        padding: 70px 1rem;
-    }
-
-    .content > .widescreen,
-    .mscontent > .widescreen {
-        padding: 0;
     }
 
     .tooltip {

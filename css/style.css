@@ -273,11 +273,7 @@ ul ul {
 }
 
 [class*="column-"].float {
-    height: calc(100vh - 280px);
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 50px var(--strongshadow);
-    overflow: scroll;
+    padding: 1.5rem 2rem;
 }
 
 [class*="column-"].shadow {
@@ -498,11 +494,6 @@ ul ul {
     justify-content: center;
 }
 
-.widescreen.shadow > * {
-    background-color: var(--strongshadow);
-    color: var(--white);
-}
-
 /* - - - - - - - - - */
 
 /* flexbox containers and frames (single image) / galleries (multiple images) */
@@ -528,19 +519,23 @@ ul ul {
 /* - - - - - - - - - */
 
 /* custom headers */
+
+.h1,
+.h2,
+.h3 {
+    font-weight: bold;
+}
+
 .h1 {
     font-size: 2em;
-    font-weight: bold;
 }
 
 .h2 {
     font-size: 1.5em;
-    font-weight: bold;
 }
 
 .h3 {
     font-size: 1.17em;
-    font-weight: bold;
 }
 
 /* - - - - - - - - - */

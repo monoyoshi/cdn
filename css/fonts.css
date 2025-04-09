@@ -27,6 +27,10 @@ code {
     background-color: var(--a_strongblue);
 }
 
+/* - - - - - - - - - */
+
+/* a */
+
 a {
     color: inherit;
     text-decoration: none;
@@ -48,3 +52,5 @@ a:hover:active:not(.camo) {
 .darkmode a:not(.button, .camo) {
     text-decoration: underline dotted;
 }
+
+/* - - - - - - - - - */

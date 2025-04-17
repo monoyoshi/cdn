@@ -129,6 +129,12 @@ function gURLP(p) {
     return new URLSearchParams(document.location.search).get(p);
 };
 
+// get hash
+function gHash() {
+    let url = new URL(document.URL);
+    return url.hash.substring(1);
+};
+
 $(document).ready(function() {
     $(this).scrollTop(0);
 
